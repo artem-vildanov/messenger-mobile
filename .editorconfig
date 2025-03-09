@@ -1,0 +1,30 @@
+# EditorConfig файл для React Native
+
+# Общие настройки для всех файлов
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Настройки для файлов JavaScript, TypeScript, JSX, TSX
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+
+# Настройки для JSON, YAML и Markdown (обычно используются 2 пробела)
+[*.{json,yml,yaml,md}]
+indent_size = 2
+
+# Настройки для файлов CSS, SCSS, LESS (можно изменить на 4 пробела, если так удобнее)
+[*.{css,scss,less}]
+indent_size = 2
+
+# Настройки для HTML
+[*.html]
+indent_size = 2
+
+# Настройки для конфигурационных файлов (Makefile требует табуляцию)
+[Makefile]
+indent_style = tab

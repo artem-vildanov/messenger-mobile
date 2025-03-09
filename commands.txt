@@ -1,0 +1,4 @@
+input keyevent KEYCODE_MENU
+input keyevent KEYCODE_HOME
+input keyevent KEYCODE_BACK
+input keyevent KEYCODE_APP_SWITCH
