@@ -14,7 +14,7 @@ export function mapToModel(message: MessageDto, myId: number): MessageModel {
     senderId: message.senderId,
     receiverId: message.receiverId,
     text: message.text,
-    sentAt: message.createdAt,
+    sentAt: message.createdAt.replace(/-/g, '/'),
     isMy: message.senderId === myId
   }
 }

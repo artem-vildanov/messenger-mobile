@@ -4,6 +4,7 @@ import { emptyValidator, Validator, ValidatorType } from '../../utils/validators
 import { BORDER_RADIUS, GRAY_COLOR, REGULAR_FONT_SIZE, THIN_FONT_WEIGHT } from '../../utils/styles';
 
 interface InputProps {
+  width?: '100%' | '80%' | '50%'
   placeholder?: string;
   value?: string;
   onChangeText: (text: string) => void;
@@ -18,6 +19,7 @@ export interface InputRef {
 const InputComponent = forwardRef<InputRef, InputProps>(
   (
     {
+      width = '100%',
       placeholder = '',
       value = '',
       onChangeText,
@@ -38,7 +40,7 @@ const InputComponent = forwardRef<InputRef, InputProps>(
     }, [validationResult]);
 
     return (
-      <View style={styles.container}>
+      <View style={{ width: width }}>
         <TextInput
           style={styles.input}
           placeholder={placeholder}
@@ -63,9 +65,6 @@ const InputComponent = forwardRef<InputRef, InputProps>(
 );
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%'
-  },
   input: {
     fontSize: REGULAR_FONT_SIZE,
     fontWeight: THIN_FONT_WEIGHT,
